@@ -24,6 +24,10 @@ jobs:
 
       - run: npm ci
 
+      - name: Create .env file
+        run: |
+          touch .env
+          echo "${{ secrets.PROD }}" > .env
       - run: npx pm2 stop all
       - run: npx pm2 delete all
       - run: npx pm2 start index.js
