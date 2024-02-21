@@ -6,7 +6,7 @@ require("dotenv").config();
 
 app.get("/", (req, res) => {
   return res.json({
-    message: "Naruto Uzumaki",
+    message: "Oka pilla ni set cheyi",
     name: `${process.env.NAME}`,
   });
 });
