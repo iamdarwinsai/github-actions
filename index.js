@@ -6,7 +6,7 @@ require("dotenv").config();
 
 app.get("/", (req, res) => {
   return res.json({
-    message: "Oka pilla ni set cheyi",
+    message: "All done enjoy learned CI-CD basic node app",
     name: `${process.env.NAME}`,
   });
 });
