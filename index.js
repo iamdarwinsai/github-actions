@@ -2,12 +2,15 @@ const express = require("express");
 
 const app = express();
 
+require("dotenv").config();
+
 app.get("/", (req, res) => {
   return res.json({
     message: "Naruto Uzumaki",
+    name: `${process.env.NAME}`,
   });
 });
 
-app.listen(8000, () => {
-  console.log("Started running on 8000");
+app.listen(process.env.PORT, () => {
+  console.log(`Port started working on ${process.env.PORT}`);
 });
